@@ -1,24 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class AIControl : MonoBehaviour
 {
-    public GameObject goal;
+    GameObject[] goalLocations;
     NavMeshAgent agent;
+    Animator anim;
 
-    // Start is called before the first frame update
-    void Start()
+    void Start() 
     {
         agent = this.GetComponent<NavMeshAgent>();
-        agent.SetDestination(goal.transform.position);
+        goalLocations = GameObject.FindGameObjectsWithTag("goal");
+        int i = Random.Range(0, goalLocations.Length);
+        agent.SetDestination(goalLocations[i].transform.position);
+        anim = GetComponent<Animator>();
+        anim.SetTrigger("isWalking");
+        anim.SetFloat("wOffset", Random.Range(0f, 1f));
+        float sm = Random.Range(0.5f, 2f);
+        anim.SetFloat("speedMult", sm);
+        agent.speed *= sm;
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        
+        if (agent.remainingDistance < 2)
+        {
+            int i = Random.Range(0, goalLocations.Length);
+            agent.SetDestination(goalLocations[i].transform.position);
+        }
     }
 }
