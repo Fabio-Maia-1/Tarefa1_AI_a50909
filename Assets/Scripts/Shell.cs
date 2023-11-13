@@ -5,8 +5,8 @@ using UnityEngine;
 public class Shell : MonoBehaviour
 {
     public GameObject explosion;
-    public float speed = 0.1f;
-    float ySpeed = 0.1f;
+    public float speed = 0f;
+    float ySpeed = 0f;
     float mass = 10;
     float force = 2.0f;
     float drag = 1.0f;
