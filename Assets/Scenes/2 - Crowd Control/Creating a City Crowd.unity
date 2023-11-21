@@ -10553,6 +10553,10 @@ PrefabInstance:
       propertyPath: m_LightmapIndex
       value: 72
       objectReference: {fileID: 0}
+    - target: {fileID: 2300048, guid: 629e686df649ed947b79ebadaf3d39d4, type: 3}
+      propertyPath: m_SelectedEditorRenderState
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2300050, guid: 629e686df649ed947b79ebadaf3d39d4, type: 3}
       propertyPath: m_LightmapIndex
       value: 166
