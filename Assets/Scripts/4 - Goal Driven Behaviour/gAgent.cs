@@ -22,7 +22,7 @@ public class gAgent : MonoBehaviour
     public Dictionary<SubGoal, int> goals = new Dictionary<SubGoal, int>();
     public WorldStates beliefs = new WorldStates();
 
-    GPlanner planner;
+    gPlanner planner;
     Queue<gAction> actionQueue;
     public gAction currentAction;
     SubGoal currentGoal;
