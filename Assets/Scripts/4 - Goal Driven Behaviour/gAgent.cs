@@ -20,6 +20,7 @@ public class gAgent : MonoBehaviour
 {
     public List<gAction> actions = new List<gAction>();
     public Dictionary<SubGoal, int> goals = new Dictionary<SubGoal, int>();
+    public gInventory inventory = new gInventory();
     public WorldStates beliefs = new WorldStates();
 
     gPlanner planner;
