@@ -4036,7 +4036,7 @@ MonoBehaviour:
   - key: Waiting
     value: 0
   afterEffects:
-  - key: treatPatient
+  - key: PatientPickedUp
     value: 0
   agent: {fileID: 0}
   running: 0
@@ -4054,6 +4054,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actions: []
   currentAction: {fileID: 0}
+--- !u!114 &1637253006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637253001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aa6947dd6b3deb4d9fa6b92e55ef311, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionName: GoToCubicle
+  cost: 1
+  target: {fileID: 0}
+  targetTag: 
+  duration: 0
+  preConditions:
+  - key: PatientPickedUp
+    value: 0
+  afterEffects:
+  - key: treatPatient
+    value: 0
+  agent: {fileID: 0}
+  running: 0
 --- !u!1 &1646061454
 GameObject:
   m_ObjectHideFlags: 0
