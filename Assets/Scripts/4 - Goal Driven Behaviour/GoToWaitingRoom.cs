@@ -12,6 +12,7 @@ public class GoToWaitingRoom : gAction
     {
         gWorld.Instance.GetWorld().ModifyState("Waiting", 1);
         gWorld.Instance.AddPatient(this.gameObject);
+        beliefs.ModifyState("atHospital", 1);
         return true;
     }
 }
