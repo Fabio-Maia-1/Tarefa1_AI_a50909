@@ -14,6 +14,7 @@ public class GetTreated : gAction
     public override bool PostPerform()
     {
         gWorld.Instance.GetWorld().ModifyState("Treated", 1);
+        beliefs.ModifyState("isCured", 1);
         inventory.RemoveItem(target);
         return true;
     }

@@ -20,7 +20,7 @@ public class Spawn : MonoBehaviour
     void SpawnPatient()
     {
         Instantiate(patientPrefab, this.transform.position, Quaternion.identity);
-        Invoke("SpawnPatient", Random.Range(2, 10));
+        Invoke("SpawnPatient", Random.Range(7, 16));
     }
 
     // Update is called once per frame

@@ -14,6 +14,10 @@ public class Patient : gAgent
         base.Start();
         SubGoal s2 = new SubGoal("isTreated", 1, true);
         goals.Add(s2, 5);
+
+        base.Start();
+        SubGoal s3 = new SubGoal("isHome", 1, true);
+        goals.Add(s3, 5);
     }
 
     // Update is called once per frame
